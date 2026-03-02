@@ -149,7 +149,12 @@ img {
   columns: 2 20em;
 
   strong {
+    display: block;
     inline-size: 10em;
+
+    @media (width > 400px) {
+      display: inline-block;
+    }
   }
 
 }
