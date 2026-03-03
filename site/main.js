@@ -8,13 +8,6 @@ document.addEventListener('click', e => {
     return;
   }
 
-  const m = t.dataset.email;
-  if (m) {
-    e.preventDefault();
-    window.location.href = `mailto:${ m.replace(/\{at\}/,'@').replace(/dot/g,'.').replace(/\s/g,'') }?subject=view%2019%20Rosebery%20Road`;
-    return;
-  }
-
   const i = t.src;
   if (i) {
 
@@ -26,6 +19,12 @@ document.addEventListener('click', e => {
     d.innerHTML = `<img src="${ i }">`;
     d.showModal();
 
+  }
+
+  const m = t.dataset.mto;
+  if (m) {
+    e.preventDefault();
+    window.location.href = 'ma'+`ilto:${ m }@roseberyroad.co.uk?subject=Rosebery%20Road%20viewing`;
   }
 
 });

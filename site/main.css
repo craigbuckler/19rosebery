@@ -53,14 +53,20 @@ h1, h2 {
 
 h2 {
   font-size: 1.5em;
+  color: var(--colf1);
 }
 
 p {
   margin-block-start: 1em;
 }
 
-h2 + p {
-  margin-block-start: 0;
+a:link, a:visited {
+  color: var(--colb2);
+  text-decoration: underline;
+}
+
+a:hover, a:active, a:focus {
+  color: var(--colf1);
 }
 
 .inner {
@@ -95,7 +101,7 @@ h2 + p {
 }
 
 iframe {
-  block-size: 90vb;
+  block-size: 80vb;
 }
 
 .images {
@@ -130,13 +136,6 @@ img {
     margin-inline-start: 1.2em;
   }
 
-  li.note {
-    list-style-type: none;
-    font-style: italic;
-    margin-block-start: 0;
-    color: var(--colf1);
-  }
-
   strong {
     display: inline-block;
     inline-size: 6em;
@@ -159,13 +158,14 @@ img {
 
 }
 
-.button {
+a.button {
   display: block;
   inline-size: 9em;
   font-weight: 600;
   text-align: center;
   text-decoration: none;
   padding-block: 0.2em;
+  margin-block-start: 2em;
   margin-inline: auto;
   color: var(--colb1);
   background-color: var(--colb2);
@@ -186,8 +186,9 @@ header {
     margin: 0;
   }
 
-  .button {
+  a.button {
     display: inline-block;
+    margin-block-start: 0;
     margin-inline-start: var(--pad);
     color: var(--colb2);
     background-color: var(--colf1);
@@ -212,6 +213,7 @@ header {
       font-size: 1.5em;
       font-weight: 600;
       line-height: 1.2;
+      padding-block-start: 0.4em;
       color: var(--colf1);
       text-shadow: 0 1px 2px #000;
 
@@ -254,7 +256,6 @@ dialog {
     block-size: 100%;
     aspect-ratio: none;
     object-fit: contain;
-    filter: drop-shadow(0 2px 2px #000);
   }
 
   &, &::backdrop {
@@ -274,7 +275,7 @@ dialog {
     }
 
     &::backdrop {
-      background-color: rgba(0,0,0,0.7);
+      background-color: rgba(0,0,0,0.8);
       backdrop-filter: blur(3px);
 
       @starting-style {
