@@ -102,6 +102,7 @@ a:hover, a:active, a:focus {
 
 iframe {
   block-size: 80vb;
+  overscroll-behavior: none;
 }
 
 .images {
