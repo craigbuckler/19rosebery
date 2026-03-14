@@ -1,0 +1,236 @@
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    padding: 0;
+    margin: 0;
+  }
+  :root {
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    image-rendering: -webkit-optimize-contrast;
+    interpolate-size: allow-keywords;
+  }
+  html {
+    writing-mode: horizontal-tb;
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+  }
+  body {
+    line-height: 1.5;
+    touch-action: manipulation;
+  }
+  img,
+  svg,
+  figure,
+  picture {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+  [hidden] {
+    display: none;
+  }
+  h1,
+  h2 {
+    font-weight: var(--font-weight-head);
+    line-height: 1.1;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+  }
+  p,
+  li {
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+  }
+  strong {
+    font-weight: var(--font-weight-bold);
+  }
+  a {
+    text-decoration-skip-ink: auto;
+  }
+  table,
+  th,
+  td,
+  input,
+  button,
+  textarea,
+  select {
+    font-family: inherit;
+    font-size: inherit;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    color: currentColor;
+  }
+  textarea:not([rows]) {
+    min-block-size: 5em;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  label {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+:root {
+  --font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    avenir next,
+    avenir,
+    segoe ui,
+    helvetica neue,
+    Adwaita Sans,
+    Cantarell,
+    Ubuntu,
+    roboto,
+    noto,
+    helvetica,
+    arial,
+    sans-serif;
+  --fsize-0: clamp(1.125rem, 0.9844rem + 0.625vw, 1.375rem);
+  --font-weight-normal: 300;
+  --font-weight-bold: 600;
+  --font-weight-head: 600;
+  color-scheme: light dark;
+  --color-fore0: CanvasText;
+  --color-back0: Canvas;
+  --color-fore1: color-mix(in oklab, var(--color-fore0), var(--color-back0) 30%);
+  --color-back1: color-mix(in oklab, var(--color-back0), Highlight 30%);
+  --color-fore2: color-mix(in oklab, var(--color-fore0), var(--color-back0) 80%);
+  --color-link0: LinkText;
+  --color-link1: color-mix(in oklab, var(--color-link0), var(--color-fore0) 50%);
+  --color-link1trans: color-mix(in oklab, var(--color-link1), transparent 50%);
+  --color-link2: VisitedText;
+}
+body {
+  font-family: var(--font-family);
+  font-size: var(--fsize-0);
+  font-weight: var(--font-weight-normal);
+  margin: 4vmin;
+  color: var(--color-fore0);
+  background-color: var(--color-back0);
+}
+body.property {
+  header,
+  main,
+  footer {
+    max-inline-size: 70ch;
+    margin-inline: auto;
+  }
+}
+h1 {
+  font-size: 1.8em;
+}
+h2 {
+  font-size: 1.4em;
+  padding-block: 0.1em 0.2em;
+  padding-inline: 0.3em;
+  margin-block-start: 2em;
+  background-color: var(--color-back1);
+  border-radius: 0.2em;
+}
+h3 {
+  font-size: 1.2em;
+}
+p,
+ol,
+ul,
+li {
+  list-style-type: none;
+  margin-block-start: 0.8em;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--color-link0);
+}
+a:visited:not([download]) {
+  color: var(--color-link2);
+}
+a:hover,
+a:active,
+a:focus {
+  text-decoration: underline;
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: 0.3em;
+  color: var(--color-link1);
+}
+a:focus-visible {
+  text-decoration: none;
+  outline-style: solid;
+  outline-offset: 0.2em;
+  outline-width: 0.2rem;
+  outline-color: var(--color-link1trans);
+}
+a[download] {
+  font-weight: var(--font-weight-bold);
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ec7"><path d="M14 6.5h-.18L9.65 9.98l-.16.12a2 2 0 0 1-1.09.4H2v7.4A2.25 2.25 0 0 0 4.26 20H15.5v-3.5h-.25a.75.75 0 0 1 0-1.5h.25v-1.5h-.25a.75.75 0 0 1 0-1.5h.25v-1h-.75a.75.75 0 0 1-.75-.75zm1.5 0H17v2.75h-1.5zm3 0h1.25a2.25 2.25 0 0 1 2.23 1.94l.01.16.01.15v9A2.25 2.25 0 0 1 19.9 20H17v-2h.25a.75.75 0 0 0 0-1.5H17V15h.25a.75.75 0 0 0 0-1.5H17V11h.75a.75.75 0 0 0 .75-.75z"/><path d="M9.49 4.4A2.3 2.3 0 0 0 8.21 4H4.1A2.25 2.25 0 0 0 2 6.26V9h6.31a1 1 0 0 0 .3-.11l.08-.06 3.06-2.56-2.1-1.75z"/></svg>');
+}
+.download.contracts a,
+.documents a:not([download]):not(.share) {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="%2377c" viewBox="0 0 24 24"><path d="M14.75 16.5c1.3 0 1.82.58 2.2 1.87l.07.24c.19.66.3.85.52.95.26.1.43.09.7-.05l.15-.08.17-.11.66-.46c.62-.4 1.17-.67 1.85-.84a.75.75 0 0 1 .36 1.46 4 4 0 0 0-1.14.49l-.3.19-.48.33-.59.35a2.2 2.2 0 0 1-1.96.1c-.74-.3-1.04-.78-1.32-1.72l-.16-.54c-.18-.59-.3-.68-.73-.68-.31 0-.63.16-1.07.52l-.18.16-.92.88c-1.41 1.32-2.61 1.97-4.33 1.97q-2.54 0-4.37-.77l2.95-.8q.67.06 1.42.07c1.18 0 2.03-.42 3.09-1.37l.25-.24.54-.5q.32-.34.59-.55c.68-.57 1.3-.87 2.03-.87m4.28-13.53a3.6 3.6 0 0 1 0 5.06l-.29.29c1.15 1.4 1.11 2.89.04 3.96l-2 2a.75.75 0 0 1-1.06-1.06l2-2c.48-.49.54-1.09-.04-1.84L9.06 18a2 2 0 0 1-1 .58l-5.11 1.4a.75.75 0 0 1-.92-.93l1.4-5.11a2 2 0 0 1 .57-1l9.97-9.97a3.6 3.6 0 0 1 5.06 0"/></svg>');
+}
+.download.property a {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="%23c77" viewBox="0 0 24 24"><path d="M10.5 2.5a2.3 2.3 0 0 1 3 0l6.7 5.7q.8.7.8 1.8v9.7a2 2 0 0 1-1.7 1.8H4.8A2 2 0 0 1 3 19.8V9.9q0-1 .8-1.7zm5.3 9.3a.8.8 0 1 0-1-1l-4 3.9-1.5-1.5a.8.8 0 1 0-1 1l2 2a1 1 0 0 0 1 0z"/></svg>');
+}
+.download.guides a {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="%236a6" viewBox="0 0 24 24"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H18a2.5 2.5 0 0 1 2.5 2.5v14.3a1 1 0 0 1-.7.7H5.4a1 1 0 0 0 1 1h13.3a.8.8 0 0 1 0 1.5H6.5A2.5 2.5 0 0 1 4 19.5zM12.3 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-.8 1.8v5a.8.8 0 0 0 1.5 0v-5a.8.8 0 0 0-1.5 0"/></svg>');
+}
+a[download],
+.download a,
+.documents a {
+  display: inline-block;
+  padding-inline-start: 2.5em;
+  background-size: 2em;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+}
+footer {
+  margin-block-start: 2em;
+  padding-block: 1em;
+  border-block-start: 1px solid var(--color-fore2);
+  a {
+    display: block;
+  }
+}
+@media print {
+  body {
+    --fsize-0: 1em;
+  }
+  body.property {
+    header,
+    main,
+    footer {
+      max-inline-size: none;
+    }
+  }
+  .properties {
+    display: block;
+    gap: 0;
+    & > li {
+      padding: 0;
+      margin-block-start: 1em;
+      border: 0 none;
+    }
+    .documents {
+      display: none;
+    }
+  }
+  h2,
+  h3,
+  p,
+  li,
+  table,
+  img {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
