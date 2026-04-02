@@ -56,6 +56,10 @@ h2 {
   color: var(--colf1);
 }
 
+.sections h2 {
+  margin-block-start: 2em;
+}
+
 p {
   margin-block-start: 1em;
 }
@@ -100,6 +104,17 @@ a:hover, a:active, a:focus {
   flex-direction: row-reverse;
 }
 
+video {
+  display: block;
+  aspect-ratio: 9/16;
+  inline-size: auto;
+  max-inline-size: 100%;
+  block-size: 100%;
+  max-block-size: 95vb;
+  margin-inline: auto;
+  border: 1px solid #000;
+}
+
 iframe {
   block-size: 80vb;
   overscroll-behavior: none;
@@ -138,23 +153,20 @@ img {
   }
 
   strong {
-    display: inline-block;
-    inline-size: 6em;
+    display: block;
   }
 
-}
+  @media (width > 400px) {
 
-.features.col {
-
-  columns: 2 20em;
-
-  strong {
-    display: block;
-    inline-size: 10em;
-
-    @media (width > 400px) {
+    strong {
       display: inline-block;
+      inline-size: 6em;
     }
+
+    &.walk strong {
+      inline-size: 10em;
+    }
+
   }
 
 }
