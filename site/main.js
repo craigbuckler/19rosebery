@@ -24,7 +24,7 @@ document.addEventListener('click', e => {
   const m = t.dataset.mto;
   if (m) {
     e.preventDefault();
-    window.location.href = 'ma'+`ilto:${ m }@roseberyroad.co.uk?subject=Rosebery%20Road%20viewing`;
+    window.location.href = 'ma'+`ilto:${ m }@totalletting.co.uk?subject=19%20Rosebery%20Road%20viewing`;
   }
 
 });
