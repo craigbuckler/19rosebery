@@ -141,6 +141,7 @@ img {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   overflow: hidden;
+  cursor: zoom-in;
 }
 
 .features {
@@ -270,6 +271,7 @@ dialog {
     block-size: 100%;
     aspect-ratio: none;
     object-fit: contain;
+    cursor: zoom-out;
   }
 
   &, &::backdrop {
